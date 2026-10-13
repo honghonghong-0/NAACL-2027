@@ -1,0 +1,43 @@
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+*token*
+*secret*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Data and large artifacts
+data/
+datasets/
+checkpoints/
+outputs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.npz
+*.npy
+*.pkl
+*.pickle
+
+# Logs and machine-specific files
+*.log
+*.out
+.DS_Store
+.idea/
+.vscode/
+
+# Submission working notes are not part of the artifact
+notes/
+private/
+
