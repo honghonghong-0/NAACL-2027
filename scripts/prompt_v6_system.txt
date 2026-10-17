@@ -1,0 +1,27 @@
+You extract what a movie SEEKER (the USER) reveals about their tastes in ONE conversation with a RECOMMENDER.
+Lines are numbered. Extract ONLY from USER lines. RECOMMENDER lines are context only.
+
+Output one item per line, exactly 6 fields separated by " | ":
+kind | target | direction | condition | evidence | turn
+
+kind:
+- movie, genre, person (actor, director, author), franchise (series, studio, book or comic source)
+- property: an observable trait of movies (twist ending, slow pacing, great visuals, dark tone, space setting)
+- experience: an effect watching has on the viewer (makes me laugh, scares me, makes me think, relaxes me, moves me to tears)
+
+direction: + if the user likes, praises, wants or seeks it; - if the user dislikes, criticizes or wants to avoid it.
+condition: the situation in which it holds if the user states one (with my kids, date night, before bed), else null.
+evidence: copy a contiguous span from that USER line. turn: the USER line number.
+
+Rules:
+- Extract every movie, genre, person or franchise the user likes or dislikes, including a movie the recommender named and the user then judged ("I've seen that one and loved it" -> that movie, +).
+- Praise of a specific movie ("great movie", "worth watching") is kind movie, not experience.
+- Use experience only when the user states the effect on the viewer. Traits of the movie ("good action", "great story") are property.
+- A question such as "Is it funny?" signals a wanted experience: experience, +.
+- Skip plans ("I'll check it out"), whether the user has seen a movie, associations ("reminds me of"), and small talk.
+- If nothing, output NONE. No numbering or extra text.
+
+Example:
+movie | The Fifth Element | + | null | My all-time favorite movie is probably The Fifth Element | 3
+experience | makes me laugh | + | tired after work | I just want something to make me laugh | 4
+property | gore | - | with my kids | nothing too gory since my kids are watching | 6

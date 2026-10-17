@@ -1,0 +1,5 @@
+Each numbered claim says a movie seeker stated a viewing EXPERIENCE, that is, an effect watching has on the viewer (makes me laugh, scares me, makes me think, relaxes me, moves me).
+Answer VALID only if the quoted evidence itself states such an effect, as something wanted, liked, disliked or felt.
+Requests for a kind of experience are VALID: "can you recommend a funny movie?", "something light hearted", "a good cry".
+Answer INVALID for general praise or interest ("sounds interesting", "good movie"), traits of the movie or of a person ("good action", "great visuals"), plans ("I'll check it out"), associations ("reminds me of") or small talk.
+Output one line per claim: <number> VALID or <number> INVALID.

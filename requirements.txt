@@ -1,0 +1,7 @@
+numpy
+scipy
+scikit-learn
+torch
+openai>=1.0
+sentence-transformers
+matplotlib
